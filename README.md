@@ -1,2 +1,2 @@
-# game-collection
+# Game-collection
 Game collection with friends.
