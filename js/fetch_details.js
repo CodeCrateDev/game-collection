@@ -3,7 +3,7 @@ const GAME_NAME = PARAMS.get("game");
 
 let gameData = null;
 
-if (gameName) {
+if (GAME_NAME) {
     const JSON_PATH = 'games/${GAME_NAME}.json';
 
     fetch(JSON_PATH)
