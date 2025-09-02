@@ -1,0 +1,18 @@
+{
+    "title": "Test",
+    "desc": "Test description",
+    "markdown": "test_game.json",
+    "link": "https://www.google.com",
+    "preview": "img/preview.png",
+    "images": [
+        "img/screenshot1.png",
+        "img/screenshot2.png",
+        "img/screenshot3.png",
+        "img/screenshot4.png"
+    ],
+    "tags": [
+        "combat",
+        "first-person",
+        "unity"
+    ]
+}

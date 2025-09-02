@@ -1,0 +1,11 @@
+html {
+    font-family: "Roboto";
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+}
+
+h1, h2, p {
+    color: white;
+}
