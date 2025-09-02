@@ -1,44 +1,30 @@
-// Fetch the current selected game
 const PARAMS = new URLSearchParams(window.location.search);
-const GAME = PARAMS.get("game");
+const GAME_NAME = PARAMS.get("game");
 
-let gameData = getGameData();
+let gameData = null;
 
-function displayGameData()
-{
-    document.getElementById("game-title").textContent = gameData.title;
-    document.getElementById("game-title").textContent = gameData.desc;
+if (gameName) {
+    const JSON_PATH = 'games/${GAME_NAME}.json';
+
+    fetch(JSON_PATH)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Game data not found: ${JSON_PATH}');
+        }
+        return response.json();
+    })
+    .then(data => {
+        gameData = data;
+
+        document.getElementById("game-title").textContent = gameData.title || GAME_NAME;
+        document.getElementById("game-description").textContent = gameData.description || "No description available.";
+        document.getElementById("game-author").textContent = gameData.author || "Unknown";
+    })
+    .catch(err => {
+        document.getElementById("game-title").textContent = "Error loading game";
+        document.getElementById("game-description").textContent = err.message;
+    })
 }
-
-function getGameData()
-{
-    if (GAME)
-    {
-        document.getElementById("game-title").textContent = "Loading: ${GAME}...";
-
-        const JSON_PATH = "../games/${GAME}.json";
-
-        fetch(JSON_PATH)
-        .then(response => {
-            if (!response.ok)
-            {
-                throw new Error("Game not found!");
-            }
-            return response.json;
-        })
-        .then(data => {
-            gameData = data;
-            displayGameData();
-
-            console.log("Loaded game: ${GAME}")
-        })
-        .catch(err => {
-            document.getElementById("game-title").textContent = "Error loading page";
-            console.log(err);
-        })
-    }
-    else
-    {
-        console.log("No game selected!");
-    }
+else {
+    document.getElementById("game-title").textContent = "No game selected"
 }
