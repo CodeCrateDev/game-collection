@@ -1,0 +1,34 @@
+{
+    "title": "Alone in Space",
+    "author": "Bastien 'CodeCrate' Fortier",
+    "description": "A short horror game where you are a maintenance crew of a spaceship. You may not be as alone as you thought.",
+    "markdown": "alone_in_space.md",
+    "version": "1.0.0",
+    "classification": "Game",
+    "release-status": "Released",
+    "release-date": "yyyy-mm-dd",
+    "genre": "Action",
+    "url": "https://google.com",
+    "thumbnail": "thumbnail.png",
+    "images": [
+        "screenshot1",
+        "screenshot2",
+        "screenshot3",
+        "screenshot4"
+    ],
+    "tags": [
+        "3d",
+        "horror",
+        "low-oply",
+        "singleplayer"
+    ],
+    "input-methods": [
+        "keyboard",
+        "mouse"
+    ],
+    "languages": [
+        "english"
+    ],
+    "engine": "Unity",
+    "engine-version": "2020"
+}
