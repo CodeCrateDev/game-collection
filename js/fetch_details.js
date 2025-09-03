@@ -3,13 +3,13 @@ const GAME_NAME = PARAMS.get("game");
 
 let gameData = null;
 
-if (gameName) {
-    const JSON_PATH = 'games/${GAME_NAME}.json';
+if (GAME_NAME) {
+    const JSON_PATH = 'games/' + GAME_NAME + '.json';
 
     fetch(JSON_PATH)
     .then(response => {
         if (!response.ok) {
-            throw new Error('Game data not found: ${JSON_PATH}');
+            throw new Error('Game data not found: ' + GAME_NAME);
         }
         return response.json();
     })
