@@ -1,20 +1,7 @@
 body {
-    font-family: "Roboto", Arial, sans-serif;
-    padding: 20px;
-    background-color: #f8f8f8;
-}
-
-#game-container {
-    margin-top: 20px;
-    padding: 15px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-pre {
-    background-color: #eeeeee;
-    padding: 10px;
-    border-radius: 6px;
-    overflow: auto;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0px;
+    padding: 0px;
 }
